@@ -1,0 +1,35 @@
+version = 1
+revision = 3
+requires-python = ">=3.12"
+
+[[package]]
+name = "cli"
+version = "1.0.0"
+source = { git = "https://github.com/barrowcroft/cli.git#1c4d5bf7f80cbd986ce810005daa823a70ec9b91" }
+
+[[package]]
+name = "clp"
+version = "1.0.0"
+source = { git = "https://github.com/barrowcroft/clp.git#94ebc440ebd0711ed78dcde8ceb1d139b1311097" }
+
+[[package]]
+name = "sqli"
+version = "1.0.0"
+source = { git = "https://github.com/barrowcroft/sqli.git#9960eaad8a71afc0a6622755e292a84d5fcba389" }
+
+[[package]]
+name = "sqliteshell"
+version = "1.0.0"
+source = { editable = "." }
+dependencies = [
+    { name = "cli" },
+    { name = "clp" },
+    { name = "sqli" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "cli", git = "https://github.com/barrowcroft/cli.git" },
+    { name = "clp", git = "https://github.com/barrowcroft/clp.git" },
+    { name = "sqli", git = "https://github.com/barrowcroft/sqli.git" },
+]
